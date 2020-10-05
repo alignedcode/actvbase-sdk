@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Feedeo</title>
+
+    <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+    <base href="/index.html">
+
+    <style>
+        html {
+            background-color: #1e1e1e;
+        }
+        body.splash {
+            background: url('file:///splash.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    <script>
+        var wasDown = false;
+        function checkNetwork() {
+            var testImg = new Image();
+            testImg.onerror = function() {
+                wasDown = true;
+                var errorElement = document.getElementById("networkerror");
+                if (!errorElement) {
+                    errorElement = document.createElement("DIV");
+                    errorElement.id = "networkerror";
+                    errorElement.style.position = 'absolute';
+                    errorElement.style.backgroundColor = '#1e1e1e';
+                    errorElement.style.top = '100px';
+                    errorElement.style.margin = "60px";
+                    errorElement.style.fontSize = "58px";
+                    errorElement.style.zindex = "9999";
+                    errorElement.style.padding = "15px 5px";
+                    errorElement.style.color = "white";
+                    errorElement.innerHTML = "Пожалуйста, подключитесь к интернету!";
+                    document.body.appendChild(errorElement);
+                }
+                setTimeout(checkNetwork, 5000);
+            };
+            testImg.onload = function() {
+                if (wasDown) {
+                    location.reload(true);
+                }
+                wasDown = false;
+            };
+            testImg.src = 'https://alignedcode.github.io/teleport/lock.png';
+        }
+        checkNetwork();
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="img-src * data:; font-src * data:;">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=1280,height=720,initial-scale=1">
+</head>
+
+<body class="splash">
+    <script type="text/javascript" src="loader.js"></script>
+</body>
+
+</html>
