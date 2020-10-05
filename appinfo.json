@@ -1,0 +1,14 @@
+{
+  "id": "feedeo",
+  "version": "1.0.0",
+  "vendor": "Aligned Code",
+  "type": "web",
+  "main": "index.html",
+  "title": "Feedeo",
+  "icon": "icon.png",
+  "iconColor": "#000000",
+  "largeIcon": "icon.png",
+  "bgImage": "splashScreen.png",
+  "splashBackground": "splashScreen.png",
+  "uiRevision": 2
+}
