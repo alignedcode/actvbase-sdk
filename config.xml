@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.samsung.com/">
+  <cpname itemtype="string"/>
+  <cplogo itemtype="string"/>
+  <cpauthjs itemtype="string"/>
+  <ver>3.004</ver>
+  <type>user</type>
+  <category>Videos</category>
+  <srcctl itemtype="boolean">y</srcctl>
+  <ticker itemtype="boolean">n</ticker>
+  <childlock itemtype="boolean">n</childlock>
+  <videomute itemtype="boolean">n</videomute>
+  <dcont itemtype="boolean">y</dcont>
+  <widgetname>ViP Viasat Play</widgetname>
+  <mouse itemtype="string">y</mouse>
+  <description itemtype="string">Платный онлайн-сервис лицензионного видео</description>
+  <width>1280</width>
+  <height>720</height>
+  <autoUpdate>y</autoUpdate>
+  <fullwidget>y</fullwidget>
+  <movie>y</movie>
+  <ThumbIcon itemtype="string">icon_106x87_20171122095431000.png</ThumbIcon>
+  <BigThumbIcon itemtype="string">icon_115x95_20171122095431000.png</BigThumbIcon>
+  <ListIcon itemtype="string">icon_85x70_20171122095431000.png</ListIcon>
+  <BigListIcon itemtype="string">icon_95x78_20171122095431000.png</BigListIcon>
+  <ThumbIconHD xmlns="">icon_158x130_20171122095431000.png</ThumbIconHD>
+  <BigThumbIconHD xmlns="">icon_173x143_20171122095431000.png</BigThumbIconHD>
+  <ListIconHD xmlns="">icon_128x105_20171122095431000.png</ListIconHD>
+  <BigListIconHD xmlns="">icon_143x118_20171122095431000.png</BigListIconHD>
+  <author itemtype="group">
+    <name itemtype="string"></name>
+    <email itemtype="string"></email>
+    <link itemtype="string"></link>
+    <organization itemtype="string"></organization>
+  </author>
+</widget>

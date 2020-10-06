@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="$MANAGER_WIDGET/Common/af/2.0.0/loader.js"></script>
+    <script src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+    <script src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+    <script src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+
+    <title>ViPlay</title>
+
+    <style>
+        html {
+            background-color: #1e1e1e;
+        }
+        body.splash {
+            background: url('splash.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    <script>
+        var gatewayStatus = false;
+
+        function checkNetwork() {
+            var testImg = new Image();
+            gatewayStatus = navigator.onLine;
+            testImg.onerror = function() {
+                if (!gatewayStatus) {
+                    var errorElement = document.createElement("DIV");
+                    errorElement.id = "networkerror";
+                    errorElement.style.margin = "60px";
+                    errorElement.style.fontSize = "60px";
+                    errorElement.style.color = "white";
+                    errorElement.innerHTML = "Пожалуйста, подключитесь к интернету!";
+
+                    document.body.appendChild(errorElement);
+                }
+                setTimeout(checkNetwork, 5000);
+            };
+            testImg.onload = function() {
+                if (gatewayStatus) {
+                    location.reload();
+                }
+            };
+            testImg.src = "https://smarttv-viasat.cdnvideo.ru/favicon.ico";
+        }
+
+        checkNetwork();
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="img-src * data:; font-src * data:;">
+    <meta name="viewport" content="width=1280,height=720,initial-scale=1">
+
+    <!-- <script type="text/javascript" src="http://192.168.100.96:8082/console.io.js"></script>
+    <script src="http://192.168.100.10:4200/target/target-script-min.js#anonymous" type="text/javascript"></script>-->
+</head>
+
+<body class="splash">
+    <script type="text/javascript" src="loader.js"></script>
+</body>
+
+</html>
